@@ -26,7 +26,7 @@
             isActiveRecord: $scope.publication.isActiveRecord
         };
         console.log(data);               
-        $http.post('/api/publications/'+$scope.publication._id, data).then(function (response) {
+        $http.put('/api/publications/'+$scope.publication._id, data).then(function (response) {
             //$scope.datas = response.data;
             //console.log(response.data);
             $location.path('/list')
