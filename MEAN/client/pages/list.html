@@ -14,7 +14,8 @@
                     Commision For Adv : {{ publication.commissionRateForAdvertisments }} </br>
                     Commision For Classifieds : {{ publication.commisionRateForClassifieds }} </br>
                     IsActive : {{ publication.isActiveRecord }} </br>
-                    <a href="#/edit/{{ publication._id }}">Edit</a></br></br> 
+                    <a href="#/edit/{{ publication._id }}">Edit</a>
+                    <button ng-click="delete($index)">Delete</button></br></br> 
                 </ul>
             </div>
     </div>

@@ -13,6 +13,14 @@
           console.log($scope.publications);
       });            
     };
+
+    $scope.delete = function (index) {
+      console.log(index);
+      var publicationID = $scope.publications[index]._id;
+      $http.delete('/api/publications/'+publicationID).then(function (response) {
+        $scope.publications.splice(index,1);
+      });
+    }
   }
 
 })();

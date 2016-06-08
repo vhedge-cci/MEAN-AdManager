@@ -16,7 +16,11 @@
                 templateUrl : 'pages/list.html',
                 controller  : 'listController'
             })
-
+            // route for the add page
+            .when('/add', {
+                templateUrl : 'pages/add.html',
+                controller  : 'addController'
+            })
              // route for the edit page
             .when('/edit/:id', {
                 templateUrl : 'pages/edit.html',

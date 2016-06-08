@@ -8,6 +8,8 @@ var publicationCtrl = new (require('../controllers/publication')).Publication();
 
 router.get("/publications", publicationCtrl.getPublications); //... Get all Publications
 router.get("/publications/:id", publicationCtrl.getPublicationsByID); //... Search user base on ID
-router.put("/publications/:id", publicationCtrl.updatePublicationByID); //... Search user base on ID
+router.post("/publications", publicationCtrl.addPublication); //... add a new publication
+router.put("/publications/:id", publicationCtrl.updatePublicationByID); //... Update user base on ID
+router.delete("/publications/:id", publicationCtrl.deletePublicationByID); //... Update user base on ID
 
 module.exports = router;
