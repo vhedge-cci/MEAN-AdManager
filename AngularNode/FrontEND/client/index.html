@@ -1,0 +1,40 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html ng-app="AdManager">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="app.js"></script>
+    </head>
+    <body ng-controller="mainController">
+
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <nav class="cf" ng-include="'pages/nav.html'" ng-controller="mainController"></nav>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <div ng-view></div>
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+
+        </div>
+
+    </body>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/listController.js"></script>
+    <script src="controllers/editController.js"></script>
+    <script src="services/authentication.service.js"></script>
+    </html>

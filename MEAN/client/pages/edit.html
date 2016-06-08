@@ -1,0 +1,17 @@
+<!-- <div class="jumbotron text-center">
+        <h1>Edit Page</h1>
+</div> -->        
+<div class="container">
+    <h2> Edit Page </h2>
+    <form class="" role="form" ng-submit="updateNote()">
+        Name : <input type='text' ng-model="publication.publicationName"><br><br>
+        Type : <input type='text' ng-model="publication.publicationType"><br><br>
+        Language : <input type='text' ng-model="publication.publicationLanguage"><br><br>
+        Commision For Adv : <input type='text' ng-model="publication.commissionRateForAdvertisments"><br><br>
+        Commision For Classifieds : <input type='text' ng-model="publication.commisionRateForClassifieds"><br><br>
+        IsActive : <input type='text' ng-model="publication.isActiveRecord"><br><br><br>
+        <input type='hidden' ng-model="publication._id">
+        <input type="submit" value="Update" name="submit">
+    </form>
+</div>
+
