@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan     = require("morgan");
 var cors = require('express-cors');
-var multer = require('multer');
 var jwt = require('jsonwebtoken');
 // [SH] Require Passport
 var passport = require('passport');

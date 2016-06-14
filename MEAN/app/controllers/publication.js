@@ -8,7 +8,7 @@ var Publication = function()
 
 	//...Get all Publication
 	this.getPublications = function(req, res){
-		Publication.find({}).lean().exec(function(err, publications){
+		Publication.find({isActiveRecord : 1}, {publicationName : 1}).lean().exec(function(err, publications){
 			//var ids = users.map( function(doc) { return doc._id } );
 			return res.status(200).json({publications : publications});
 		})
